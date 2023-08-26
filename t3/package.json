@@ -1,0 +1,20 @@
+{
+  "name": "t3package",
+  "version": "1.0.0",
+  "description": "t3 package tutorial",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Serge Sadowsky",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.4.0",
+    "express": "^4.18.2",
+    "ws": "^8.13.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.48.0",
+    "typescript": "^5.2.2"
+  }
+}
