@@ -1,0 +1,14 @@
+{
+  "name": "eetutorial",
+  "version": "1.0.0",
+  "description": "Event Emitter tuttorial",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "task1": "nodemon index",
+    "task2": "nodemon index2"
+  },
+  "type": "module",
+  "author": "Serge Sadowsky",
+  "license": "ISC"
+}
