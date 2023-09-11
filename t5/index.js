@@ -97,6 +97,6 @@ filesCopy(srcDir, dstDir, (error) => {
       console.error(element);
     });
   } else {
-    console.log('All file system object copied Succesfully.');
+    console.log('All file system objects copied succesfully.');
   }
 });
