@@ -34,14 +34,14 @@ const filesCopy = async (srcDir, dstDir, cb) => {
     console.log('Source directory - Ok');
   } catch (error) {
     cb(['Source directory - Error. ' + error.message]);
-    process.exit(1);
+    return 1;
   };
   try {
     await access(dstDir, constants.W_OK);
     console.log('Destination directory - Ok');
   } catch (error) {
     cb(['Destination directory - Error. ' + error.message]);
-    process.exit(1);
+    return 1;
   };
 
   for await(const fso of getFSObjects(srcDir)){
