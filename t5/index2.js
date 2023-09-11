@@ -50,18 +50,24 @@ class Logger extends EventEmitter {
     };
 
     async writeLog() {
-         try {
-            await writeFile(this._logQueue);
+        try {
+            const message = this._logQueue[0];
+            await writeFile(this._fileName, this._logQueue);
+            this.emit('messageLogged', message);
             this._logQueue.length = 0;
-            this.emit('messageLogged');
-         } catch (error) {
+            await this.checkFileSize();
+            if(this._logQueue.length > 0) {
+                await this.writeLog();
+            }
+            this._writing = false;            
+        } catch (error) {
             console.log(error.message);
-         }
+        }
     };
 
     async getFileSize() {
       try {
-        const fsStat = await stat(fileName);
+        const fsStat = await stat(this._fileName);
         return fsStat.size;
       } catch (error) {
         console.error(error.message);
@@ -69,23 +75,25 @@ class Logger extends EventEmitter {
       }
     };
 
-    async checkFileSize() {
-      
-    
-      if(this.getFileSize > this._maxSize){
+    async checkFileSize() {     
+      if(await this.getFileSize() > this._maxSize){        
         await this.rotateLog();
       }
     };
 
+    getBackupName(){
+        const now = new Date();
+        return [now.getFullYear(), 
+            (now.getMonth() + 1).toString().padStart(2, '0'), 
+            now.getDate().toString().padStart(2, '0'),
+            now.getHours().toString().padStart(2, '0'),
+            now.getMinutes().toString().padStart(2, '0'),
+            now.getSeconds().toString().padStart(2, '0'),
+            this._fileName + '.bak', ].join('-'); 
+    };
+
     async rotateLog() {
-      const now = new Date();
-      const newFile = [now.getFullYear(), 
-        (now.getMonth() + 1).toString().padStart(2), 
-        now.getDate().toString().padStart(2, '0'),
-        now.getHours().toString().padStart(2, '0'),
-        now.getMinutes().toString().padStart(2, '0'),
-        now.getSeconds().toString().padStart(2, '0'),
-        this._fileName].join('-'); 
+        const newFile = this.getBackupName();
         if(!this._writing) {
           try {
             await copyFile(this._fileName, newFile)
@@ -96,14 +104,15 @@ class Logger extends EventEmitter {
         }
     };
 };
-const logger = new Logger('test.log', 2048);
+const logger = new Logger('test.log', 50);
 
 logger.on('messageLogged', message => {
   console.log('Записано сообщение:', message);
   });
+
 logger.log('Первое сообщение');
 logger.log('Второе сообщение');
-
-console.log('logger.getFileSize: ', logger.getFileSize());
-console.log('logger.checkFileSize(): ', logger.checkFileSize());
-
+logger.log('Третье сообщение');
+logger.log('Четвертое сообщение');
+logger.log('Пятое сообщение');
+logger.log('Шестое сообщение');
