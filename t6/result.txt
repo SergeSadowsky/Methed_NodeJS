@@ -1,0 +1,34 @@
+[1.txt]
+( A number of Amiga 1080 monitors were built by Toshiba. The people at
+Toshiba could have done a better job in a couple of respects:
+
+   First, they did a poor job of extracting vertical sync pulses from the
+   video signal that comes from the Amiga. This produces an error in the
+   interlacing when the Amiga is used in 320x400 or 640x400 display modes.
+   When you look closely at the screen you see alternating line spacings. It
+   also gives characters a ragged look.  The modification described in the
+   dPaintII file reduces the interlace error by a factor of about 5.)
+[2.txt]
+(While interlaced video isn't the nicest thing to read characters on, it's
+   neat to be able to put nearly all of a typewritten page on the screen. Most
+   of the Amiga outlets handle a neat thing called Jitter-Rid, or some such
+   thing.  It is a thick piece of smoked plastic that goes on your 1080
+   monitor. It enhances the contrast and attenuates the light from the screen
+   to keep your brain from rattling too badly from the flicker. Also, dark
+   characters on a light background seem to work best for me, anyway.)
+[3.txt]
+(The second problem is a thing called crossover distortion. They did a dumb
+   thing that distorts the audio, even at very low volume levels. The Amiga
+   deserves better sound. Unfortunately, this mod takes 2 diodes and a
+   resistor, but it essentially eliminates the crossover distortion.)
+[4.txt]
+(If you aren't afraid of working on the average modern TV set, the 1080
+   shouldn't prove to be much of a problem. Looking from the back, there are
+   four screws, one at each corner. You need a long Philips screwdriver for
+   those. There is a bottom plate that that also needs to come off. Finally,
+   there is a screw just above the RGB input connector. Now, if you place the
+   monitor face down on a soft towel, you can, with a little judicious prying
+   and tugging, lift the rear part of the case off. Watch out for the speaker
+   lead. You will have to unplug the connector before the back can come clear
+   off.
+   )

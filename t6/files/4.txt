@@ -1,0 +1,10 @@
+If you aren't afraid of working on the average modern TV set, the 1080
+   shouldn't prove to be much of a problem. Looking from the back, there are
+   four screws, one at each corner. You need a long Philips screwdriver for
+   those. There is a bottom plate that that also needs to come off. Finally,
+   there is a screw just above the RGB input connector. Now, if you place the
+   monitor face down on a soft towel, you can, with a little judicious prying
+   and tugging, lift the rear part of the case off. Watch out for the speaker
+   lead. You will have to unplug the connector before the back can come clear
+   off.
+   

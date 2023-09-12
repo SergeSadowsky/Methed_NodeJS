@@ -1,0 +1,9 @@
+ A number of Amiga 1080 monitors were built by Toshiba. The people at
+Toshiba could have done a better job in a couple of respects:
+
+   First, they did a poor job of extracting vertical sync pulses from the
+   video signal that comes from the Amiga. This produces an error in the
+   interlacing when the Amiga is used in 320x400 or 640x400 display modes.
+   When you look closely at the screen you see alternating line spacings. It
+   also gives characters a ragged look.  The modification described in the
+   dPaintII file reduces the interlace error by a factor of about 5.
