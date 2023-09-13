@@ -1,0 +1,13 @@
+{
+  "name": "t7",
+  "version": "1.0.0",
+  "description": "NodeJS course T7 task",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "type": "module",
+  "keywords": ["quiz", "nodejs", "methed"],
+  "author": "Serge Sadowsy",
+  "license": "ISC"
+}
