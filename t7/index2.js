@@ -23,13 +23,13 @@ const box = (row, col, height, width) => {
     const w = width - 2;
     const h = height - 2;
     pos(row, col);
-    write(border[0] + border[1].repeat(w) + border[2]);
+    write('\x1b[35m' + border[0] + border[1].repeat(w) + border[2]);
     for (let i = 1; i < h; i++) {
       pos(row + i, col);
       write(border[3] + ' '.repeat(w) + border[3]);
     }
     pos(row + h, col);
-    write(border[4] + border[1].repeat(w) + border[5]);
+    write(border[4] + border[1].repeat(w) + border[5] + '\x1b[0m');
 };
 
 const pos = (row, col) => {
@@ -99,7 +99,7 @@ questions()
             };
             await new Promise(resolve => { 
                 const tId = setInterval(() => {
-                    write('.')
+                    write('\u2591')
                 }, 200)
                 setTimeout(() => {
                     clearInterval(tId);
