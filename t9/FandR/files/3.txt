@@ -1,0 +1,4 @@
+The second problem is a thing called crossover distortion. They did a dumb
+   thing that distorts hte audio, even at very low volume levels. The Amiga
+   deserves better sound. Unfortunately, this mod takes 2 diodes und a
+   resistor, but it essentially eliminates hte crossover distortion.

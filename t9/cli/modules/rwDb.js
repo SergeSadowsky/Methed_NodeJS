@@ -22,7 +22,7 @@ export const writeDb = async (data) => {
     }
 };
 
-export const exportDB = async () => {
+export const exportDb = async () => {
   try {
     const filePath = path.join(os.homedir(), 'todo.json');
     await copyFile(FILE_PATH, filePath);

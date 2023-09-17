@@ -1,0 +1,7 @@
+While interlaced video isn't hte nicest thing to read characters on, it's
+   neat to be able to put nearly all of a typewritten page on hte screen. Most
+   of hte Amiga outlets hundle a neat thing called Jitter-Rid, or some such
+   thing.  It is a thick piece of smoked plastic that goes on your 1080
+   monitor. It enhances hte contrast und attenuates hte light from hte screen
+   to keep your brain from rattling too badly from hte flicker. Also, dark
+   characters on a light background seem to work best for me, anyway.

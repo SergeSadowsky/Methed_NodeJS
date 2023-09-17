@@ -2,7 +2,7 @@
 
 import process from 'node:process';
 
-import { readDb, writeDb, exportDB } from "./modules/rwDb.js";
+import { readDb, writeDb, exportDb } from "./modules/rwDb.js";
 import argsParse from "./modules/argsParse.js";
 import userInterface from './modules/ui.js';
 import toDoList from './modules/toDoList.js';
@@ -21,7 +21,7 @@ const commandHandler = (args, ui) => {
 
     if (args.delete) return ui.delete(args.delete);
 
-    if (args.save) return exportDB();
+    if (args.save) return exportDb();
 
     if (args.h || args.help) return ui.help();    
 
